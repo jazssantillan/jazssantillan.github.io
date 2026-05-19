@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jazmín Santillán — Community Manager & Creadora de Contenido</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080808;--bg2:#0d0d0d;--bg3:#111;
+  --gold:#c9a96e;--gold2:#e8d5a3;--gold3:#a8854a;
+  --gm:rgba(201,169,110,0.12);--gg:rgba(201,169,110,0.06);
+  --white:#f2ede6;--w60:rgba(242,237,230,0.6);--w30:rgba(242,237,230,0.3);--w10:rgba(242,237,230,0.07);
+  --nude:#c4a882;--rose:#c49898;
+  --border:rgba(201,169,110,0.15);--bs:rgba(255,255,255,0.05);
+  --serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif;
+}
+body{
+  background:var(--bg);color:var(--white);
+  font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.75;
+  overflow-x:hidden;cursor:none;
+}
+::selection{background:var(--gm);color:var(--white)}
+
+/* AMBIENT */
+.amb1,.amb2{position:fixed;pointer-events:none;z-index:0;border-radius:50%}
+.amb1{width:700px;height:700px;top:-150px;right:-150px;background:radial-gradient(circle,rgba(201,169,110,0.04) 0%,transparent 65%);animation:af 9s ease-in-out infinite alternate}
+.amb2{width:500px;height:500px;bottom:5%;left:-100px;background:radial-gradient(circle,rgba(196,152,152,0.03) 0%,transparent 65%);animation:af 12s ease-in-out infinite alternate-reverse}
+@keyframes af{0%{transform:translate(0,0)}100%{transform:translate(25px,20px)}}
+
+/* CURSOR */
+#cd{position:fixed;width:7px;height:7px;background:var(--gold);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9999;box-shadow:0 0 10px var(--gold),0 0 25px rgba(201,169,110,0.4);transition:width .2s,height .2s}
+#cr{position:fixed;width:34px;height:34px;border:1px solid rgba(201,169,110,0.45);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9998;transition:width .15s,height .15s,border-color .15s}
+body.hov #cd{width:11px;height:11px;background:var(--gold2);box-shadow:0 0 16px var(--gold),0 0 50px rgba(201,169,110,0.5)}
+body.hov #cr{width:54px;height:54px;border-color:rgba(201,169,110,0.75)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.6rem 5rem;background:rgba(8,8,8,.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--bs);transition:padding .4s,border-color .4s}
+nav.sc{padding:1.1rem 5rem;border-bottom-color:var(--border)}
+.nlogo{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--gold2);text-decoration:none;letter-spacing:.06em}
+.nlinks{display:flex;gap:2.5rem;list-style:none}
+.nlinks a{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--w30);text-decoration:none;font-weight:400;transition:color .3s;position:relative}
+.nlinks a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .3s;transform-origin:right}
+.nlinks a:hover{color:var(--gold)}
+.nlinks a:hover::after{transform:scaleX(1);transform-origin:left}
+.np{display:flex!important;align-items:center;gap:.4rem;color:var(--gold)!important;border:1px solid var(--border);padding:.45rem 1.1rem;transition:background .3s,border-color .3s!important}
+.np:hover{background:var(--gm)!important;border-color:var(--gold)!important}
+.np::after{display:none!important}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 5rem 7.5rem;position:relative;overflow:hidden}
+.hmesh{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 75% 35%,rgba(201,169,110,.07) 0%,transparent 55%),radial-gradient(ellipse 50% 70% at 15% 65%,rgba(196,152,152,.04) 0%,transparent 50%),radial-gradient(ellipse 40% 40% at 50% 90%,rgba(201,169,110,.03) 0%,transparent 60%)}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,169,110,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,110,.022) 1px,transparent 1px);background-size:80px 80px;-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 80%);mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 80%)}
+.hline{position:absolute;right:calc(5rem + 2px);top:18%;bottom:18%;width:1px;background:linear-gradient(to bottom,transparent,rgba(201,169,110,.2),transparent)}
+.hyr{position:absolute;top:50%;right:5rem;transform:translateY(-50%) rotate(90deg);font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:rgba(201,169,110,.28);font-weight:300}
+.htag{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:ru .9s .3s forwards}
+.htag::before{content:'';display:block;width:30px;height:1px;background:var(--gold);opacity:.5}
+.hname{font-family:var(--serif);font-size:clamp(4.5rem,10vw,9.5rem);font-weight:300;line-height:.92;letter-spacing:-.02em;margin-bottom:2.5rem;opacity:0;animation:ru .9s .5s forwards}
+.hname .l1{display:block;color:var(--white)}
+.hname .l2{display:block;font-style:italic;background:linear-gradient(135deg,var(--gold2) 0%,var(--gold) 50%,var(--gold3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hsub{max-width:520px;color:var(--w30);font-size:14px;line-height:1.9;margin-bottom:4rem;font-weight:300;opacity:0;animation:ru .9s .7s forwards}
+.hsub span{color:var(--nude)}
+.hctas{display:flex;gap:1.25rem;align-items:center;opacity:0;animation:ru .9s .9s forwards}
+.bg{display:inline-flex;align-items:center;gap:.65rem;padding:.95rem 2.5rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold3) 100%);color:#080808;font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:all .35s;position:relative;overflow:hidden}
+.bg::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold2),var(--gold));opacity:0;transition:opacity .35s}
+.bg:hover::before{opacity:1}
+.bg:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,169,110,.28)}
+.bg span{position:relative;z-index:1}
+.bo{display:inline-flex;align-items:center;gap:.65rem;padding:.95rem 2.5rem;background:transparent;color:var(--w60);font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:300;text-decoration:none;border:1px solid rgba(255,255,255,.1);transition:all .35s}
+.bo:hover{border-color:rgba(201,169,110,.4);color:var(--gold2)}
+
+/* DIVIDER */
+.dv{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:0 5rem}
+
+/* SECTIONS */
+section{padding:8rem 5rem;position:relative;z-index:2}
+.si{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:0 7rem}
+.sl{font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:400;padding-top:.3rem;position:sticky;top:6rem;align-self:start;display:flex;align-items:center;gap:.7rem}
+.sl::before{content:'';display:block;width:18px;height:1px;background:var(--gold);opacity:.5;flex-shrink:0}
+
+/* ABOUT */
+.ah{font-family:var(--serif);font-size:clamp(1.7rem,3.2vw,2.7rem);font-weight:300;line-height:1.3;margin-bottom:2.5rem;color:var(--white)}
+.ah em{font-style:italic;background:linear-gradient(135deg,var(--gold2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ab{color:var(--w60);max-width:620px;font-size:14.5px;line-height:1.95}
+.ab+.ab{margin-top:1.25rem}
+.astats{display:flex;gap:3rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--bs)}
+.sn{font-family:var(--serif);font-size:2.2rem;color:var(--gold);font-weight:300;line-height:1}
+.sll{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--w30);margin-top:.4rem;font-weight:400}
+
+/* SKILLS */
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);overflow:hidden}
+.skc{background:var(--bg2);padding:2.25rem 1.75rem;transition:background .4s;position:relative;overflow:hidden}
+.skc::before{content:'';position:absolute;inset:0;background:var(--gg);opacity:0;transition:opacity .4s}
+.skc:hover{background:var(--bg3)}
+.skc:hover::before{opacity:1}
+.skn{font-family:var(--serif);font-size:1.8rem;color:rgba(201,169,110,.18);font-weight:300;margin-bottom:1rem;line-height:1}
+.skt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:.75rem;font-weight:500}
+.skd{font-size:13px;color:var(--w30);line-height:1.75}
+
+/* EXP */
+.ei{padding:3rem 0;border-bottom:1px solid var(--bs);display:grid;grid-template-columns:1fr auto;gap:1rem 2rem;align-items:start}
+.ei:first-child{padding-top:0}
+.ei:last-child{border-bottom:none;padding-bottom:0}
+.ei.ft{padding-left:2rem;margin-left:-2rem;border-left:1px solid var(--gold)}
+.ftb{display:inline-flex;align-items:center;gap:.4rem;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);background:var(--gm);padding:.3rem .85rem;margin-bottom:1rem}
+.ftb::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;animation:pl 2s infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.3}}
+.ec{font-family:var(--serif);font-size:1.6rem;font-weight:300;color:var(--white);margin-bottom:.3rem;transition:color .3s}
+.ei:hover .ec{color:var(--gold2)}
+.er{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;font-weight:400}
+.ed{font-size:13.5px;color:var(--w30);max-width:560px;line-height:1.85}
+.etags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(201,169,110,.5);border:1px solid rgba(201,169,110,.2);padding:.3rem .8rem;transition:all .3s}
+.tag:hover{background:var(--gm);color:var(--gold);border-color:var(--gold)}
+.ey{font-family:var(--serif);font-size:.9rem;color:var(--w30);font-style:italic;white-space:nowrap}
+
+/* SERVICES */
+.svl{border:1px solid var(--border)}
+.svr{display:flex;align-items:center;justify-content:space-between;padding:1.85rem 2.25rem;border-bottom:1px solid var(--bs);transition:all .35s;position:relative;overflow:hidden}
+.svr:last-child{border-bottom:none}
+.svr::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--gm);transition:width .4s}
+.svr:hover::before{width:100%}
+.svc-n{font-family:var(--serif);font-size:1.2rem;font-weight:300;color:var(--white);position:relative;z-index:1;transition:color .35s}
+.svr:hover .svc-n{color:var(--gold2)}
+.svc-d{font-size:12px;color:var(--w30);max-width:370px;text-align:right;line-height:1.5;position:relative;z-index:1}
+.svc-a{font-size:1rem;color:var(--gold);opacity:0;transform:translateX(-8px);transition:all .3s;margin-left:1.5rem;position:relative;z-index:1}
+.svr:hover .svc-a{opacity:1;transform:translateX(0)}
+
+/* TOOLS */
+.tw{display:flex;flex-wrap:wrap;gap:.6rem}
+.tp{font-size:11px;letter-spacing:.1em;color:var(--w30);border:1px solid var(--bs);padding:.6rem 1.3rem;transition:all .35s;position:relative;overflow:hidden}
+.tp::before{content:'';position:absolute;inset:0;background:var(--gm);opacity:0;transition:opacity .35s}
+.tp:hover{color:var(--gold2);border-color:var(--border)}
+.tp:hover::before{opacity:1}
+.tp span{position:relative;z-index:1}
+
+/* CTA SECTION */
+.ctas{padding:9rem 5rem;background:var(--bg2);border-top:1px solid var(--bs);border-bottom:1px solid var(--bs);text-align:center;position:relative;overflow:hidden}
+.ctas::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(201,169,110,.04) 0%,transparent 65%)}
+.cgd{position:absolute;inset:0;background-image:linear-gradient(rgba(201,169,110,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,110,.03) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent);mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent)}
+.ci{position:relative;z-index:1}
+.ce{font-size:9.5px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1.75rem;display:flex;align-items:center;justify-content:center;gap:1rem}
+.ce::before,.ce::after{content:'';display:block;width:40px;height:1px;background:var(--gold);opacity:.4}
+.ct{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:300;line-height:1.1;margin-bottom:1.75rem;color:var(--white)}
+.ct em{font-style:italic;background:linear-gradient(135deg,var(--gold2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cb{color:var(--w30);font-size:14.5px;max-width:460px;margin:0 auto 3.5rem;line-height:1.9}
+.bgl{display:inline-flex;align-items:center;gap:.85rem;padding:1.15rem 3.5rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold3) 100%);color:#080808;font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:all .4s;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(201,169,110,.2)}
+.bgl::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold2),var(--gold));opacity:0;transition:opacity .4s}
+.bgl:hover::before{opacity:1}
+.bgl:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(201,169,110,.35)}
+.bgl span,.bgl .ar{position:relative;z-index:1}
+.bgl .ar{transition:transform .35s}
+.bgl:hover .ar{transform:translateX(5px)}
+
+/* CONTACT */
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.cc{background:var(--bg2);padding:2.25rem;text-decoration:none;transition:background .35s;position:relative;overflow:hidden}
+.cc::before{content:'';position:absolute;inset:0;background:var(--gm);opacity:0;transition:opacity .35s}
+.cc:hover{background:var(--bg3)}
+.cc:hover::before{opacity:1}
+.cct{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:.85rem;position:relative;z-index:1}
+.ccv{font-family:var(--serif);font-size:1.05rem;color:var(--white);font-weight:300;position:relative;z-index:1;transition:color .35s}
+.cc:hover .ccv{color:var(--gold2)}
+
+/* FOOTER */
+footer{padding:2.5rem 5rem;border-top:1px solid var(--bs);display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+.fl{font-family:var(--serif);font-size:1rem;color:rgba(201,169,110,.45);font-style:italic}
+.fc{font-size:11px;color:var(--w30);letter-spacing:.08em}
+
+/* ANIMATIONS */
+@keyframes ru{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rev.vis{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  nav{padding:1.25rem 2rem}
+  .nlinks{gap:1.5rem}
+  .hero,section,footer,.ctas{padding-left:2rem;padding-right:2rem}
+  .dv{margin:0 2rem}
+  .si{grid-template-columns:1fr;gap:2rem}
+  .sl{position:static}
+  .sg{grid-template-columns:1fr 1fr}
+  .cg{grid-template-columns:1fr}
+  .hline,.hyr{display:none}
+  .ei{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nlinks{display:none}
+  .hctas{flex-direction:column;align-items:flex-start}
+  .sg{grid-template-columns:1fr}
+  .svr{flex-direction:column;align-items:flex-start;gap:.4rem}
+  .svc-d{text-align:left;max-width:100%}
+  .astats{flex-direction:column;gap:1.5rem}
+  footer{flex-direction:column;gap:.5rem;text-align:center}
+  body{cursor:auto}
+  #cd,#cr{display:none}
+}
+</style>
+</head>
+<body>
+<div class="amb1"></div>
+<div class="amb2"></div>
+<div id="cd"></div>
+<div id="cr"></div>
+
+<nav id="nav">
+  <a href="#" class="nlogo">JS</a>
+  <ul class="nlinks">
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#exp">Experiencia</a></li>
+    <li><a href="#svc">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="https://drive.google.com/drive/folders/1tbsm2aTJ6LiB1DbgEgydjcRtUSaSZk1Y?usp=sharing" target="_blank" class="np">Portfolio →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hmesh"></div>
+  <div class="hgrid"></div>
+  <div class="hline"></div>
+  <span class="hyr">Buenos Aires · 2026</span>
+  <p class="htag">Community Manager · Social Media · Contenido Visual</p>
+  <h1 class="hname">
+    <span class="l1">Jazmín</span>
+    <span class="l2">Santillán</span>
+  </h1>
+  <p class="hsub">
+    Construyo presencia digital desde la idea hasta la publicación.<br>
+    <span>Estrategia, estética y criterio visual en cada pieza.</span>
+  </p>
+  <div class="hctas">
+    <a href="https://drive.google.com/drive/folders/1tbsm2aTJ6LiB1DbgEgydjcRtUSaSZk1Y?usp=sharing" target="_blank" class="bg">
+      <span>Ver Portfolio</span><span>→</span>
+    </a>
+    <a href="#contacto" class="bo">Contacto</a>
+  </div>
+</section>
+<div class="dv"></div>
+
+<!-- SOBRE MÍ -->
+<section id="sobre">
+  <div class="si">
+    <span class="sl">Sobre mí</span>
+    <div class="rev">
+      <p class="ah">No solo gestiono redes.<br><em>Construyo marcas digitales</em><br>desde adentro.</p>
+      <p class="ab">Soy Community Manager, Social Media Manager y Creadora de Contenido con experiencia en marcas del rubro estética, diseño y bienestar. Mi trabajo va desde la estrategia hasta la producción: pienso ideas, grabo reels, saco fotos, edito, diseño piezas y construyo la voz de cada marca.</p>
+      <p class="ab">Tengo criterio visual desarrollado y entiendo que el contenido es comunicación y branding al mismo tiempo. Trabajo con marcas que quieren una presencia digital que se vea, se sienta y conecte.</p>
+      <div class="astats">
+        <div><p class="sn">4+</p><p class="sll">Marcas gestionadas</p></div>
+        <div><p class="sn">3</p><p class="sll">Años de experiencia</p></div>
+        <div><p class="sn">100%</p><p class="sll">Contenido propio</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+
+<!-- QUÉ HAGO -->
+<section id="habilidades">
+  <div class="si">
+    <span class="sl">Qué hago</span>
+    <div class="sg rev">
+      <div class="skc"><p class="skn">01</p><p class="skt">Gestión de Redes</p><p class="skd">Manejo integral de Instagram y TikTok: planificación, publicación, métricas y crecimiento orgánico.</p></div>
+      <div class="skc"><p class="skn">02</p><p class="skt">Creación de Contenido</p><p class="skd">Producción completa: grabación de reels, fotografía, edición de video y diseño de piezas gráficas.</p></div>
+      <div class="skc"><p class="skn">03</p><p class="skt">Estrategia Editorial</p><p class="skd">Calendarios de contenido, líneas editoriales, storytelling de marca y conceptos creativos por objetivo.</p></div>
+      <div class="skc"><p class="skn">04</p><p class="skt">Branding Visual</p><p class="skd">Coherencia estética, identidad en redes, paletas visuales y criterio editorial para feeds y stories.</p></div>
+      <div class="skc"><p class="skn">05</p><p class="skt">Community Management</p><p class="skd">Atención al cliente vía DMs, gestión de mensajes, construcción de comunidad y tono de voz.</p></div>
+      <div class="skc"><p class="skn">06</p><p class="skt">Marketing Digital</p><p class="skd">Análisis de métricas, optimización de estrategias y contenido orientado a resultados reales.</p></div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+
+<!-- EXPERIENCIA -->
+<section id="exp">
+  <div class="si">
+    <span class="sl">Experiencia</span>
+    <div>
+      <div class="ei ft rev">
+        <div>
+          <span class="ftb">Posición actual · Principal</span>
+          <h3 class="ec">Estética Salguero</h3>
+          <p class="er">Community Manager & Creadora de Contenido</p>
+          <p class="ed">Manejo integral de redes con foco en producción de contenido propio: reels, fotos, stories y piezas para Instagram. Desarrollo de la identidad visual del perfil, estrategia editorial mensual y gestión activa de la comunidad. El proyecto donde más volumen y profundidad de contenido produzco actualmente.</p>
+          <div class="etags"><span class="tag">Instagram</span><span class="tag">Reels</span><span class="tag">Fotografía</span><span class="tag">Estrategia</span><span class="tag">Branding Visual</span><span class="tag">Comunidad</span></div>
+        </div>
+        <p class="ey">2024 – presente</p>
+      </div>
+      <div class="ei rev">
+        <div>
+          <h3 class="ec">Estética Bella Vita</h3>
+          <p class="er">Community Manager & Social Media</p>
+          <p class="ed">Gestión de redes, planificación de contenido y atención de la comunidad digital. Creación de piezas visuales y coordinación de publicaciones para Instagram.</p>
+          <div class="etags"><span class="tag">Instagram</span><span class="tag">Diseño</span><span class="tag">Comunidad</span></div>
+        </div>
+        <p class="ey">2023 – 2024</p>
+      </div>
+      <div class="ei rev">
+        <div>
+          <h3 class="ec">Estética VG</h3>
+          <p class="er">Community Manager & Contenido</p>
+          <p class="ed">Producción de contenido visual y manejo de redes para marca de estética. Fotografía, edición y publicaciones de Instagram.</p>
+          <div class="etags"><span class="tag">Fotografía</span><span class="tag">Edición</span><span class="tag">Instagram</span></div>
+        </div>
+        <p class="ey">2023</p>
+      </div>
+      <div class="ei rev">
+        <div>
+          <h3 class="ec">Indigo Design 3D</h3>
+          <p class="er">Social Media & Branding Digital</p>
+          <p class="ed">Gestión de comunicación digital para estudio de diseño 3D. Contenido alineado a la identidad de marca y manejo de plataformas digitales.</p>
+          <div class="etags"><span class="tag">Branding</span><span class="tag">Redes Sociales</span><span class="tag">Diseño</span></div>
+        </div>
+        <p class="ey">2022 – 2023</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+
+<!-- SERVICIOS -->
+<section id="svc">
+  <div class="si">
+    <span class="sl">Servicios</span>
+    <div class="svl rev">
+      <div class="svr"><span class="svc-n">Gestión integral de redes sociales</span><span class="svc-d">Instagram, TikTok · publicación, métricas y comunidad</span><span class="svc-a">→</span></div>
+      <div class="svr"><span class="svc-n">Producción de contenido visual</span><span class="svc-d">Reels, fotografía, edición de video y diseño gráfico</span><span class="svc-a">→</span></div>
+      <div class="svr"><span class="svc-n">Estrategia editorial y calendario</span><span class="svc-d">Planificación mensual, líneas de contenido y storytelling</span><span class="svc-a">→</span></div>
+      <div class="svr"><span class="svc-n">Branding visual en redes</span><span class="svc-d">Identidad estética, feeds coherentes y tono de marca</span><span class="svc-a">→</span></div>
+      <div class="svr"><span class="svc-n">Community management</span><span class="svc-d">DMs, atención al cliente y construcción de comunidad</span><span class="svc-a">→</span></div>
+      <div class="svr"><span class="svc-n">Consultoría de presencia digital</span><span class="svc-d">Diagnóstico, optimización y estrategia para marcas</span><span class="svc-a">→</span></div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+
+<!-- HERRAMIENTAS -->
+<section id="herramientas">
+  <div class="si">
+    <span class="sl">Herramientas</span>
+    <div class="tw rev">
+      <span class="tp"><span>Instagram</span></span>
+      <span class="tp"><span>TikTok</span></span>
+      <span class="tp"><span>Canva</span></span>
+      <span class="tp"><span>CapCut</span></span>
+      <span class="tp"><span>Meta Business Suite</span></span>
+      <span class="tp"><span>WhatsApp Business</span></span>
+      <span class="tp"><span>Google Drive</span></span>
+      <span class="tp"><span>Pinterest</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO CTA -->
+<div class="ctas">
+  <div class="cgd"></div>
+  <div class="ci rev">
+    <p class="ce">Portfolio Visual · 2026</p>
+    <h2 class="ct">Todo el trabajo,<br><em>en un solo lugar.</em></h2>
+    <p class="cb">Reels, fotos, diseños y piezas gráficas. El portfolio visual completo está disponible en Google Drive.</p>
+    <a href="https://drive.google.com/drive/folders/1tbsm2aTJ6LiB1DbgEgydjcRtUSaSZk1Y?usp=sharing" target="_blank" class="bgl">
+      <span>Ver Portfolio Completo</span><span class="ar">→</span>
+    </a>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="si">
+    <span class="sl">Contacto</span>
+    <div class="rev">
+      <div class="cg">
+        <a href="mailto:jaz.santillan1@gmail.com" class="cc"><p class="cct">Email</p><p class="ccv">jaz.santillan1@gmail.com</p></a>
+        <a href="tel:+541154597101" class="cc"><p class="cct">Teléfono / WhatsApp</p><p class="ccv">+54 11 5459-7101</p></a>
+        <a href="https://instagram.com/jazssantillan" target="_blank" class="cc"><p class="cct">Instagram</p><p class="ccv">@jazssantillan</p></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="fl">Jazmín Santillán</span>
+  <span class="fc">© 2026 · Community Manager & Creadora de Contenido · Buenos Aires</span>
+</footer>
+
+<script>
+// CURSOR
+const cd=document.getElementById('cd'),cr=document.getElementById('cr');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;my=e.clientY;
+  cd.style.left=mx+'px';cd.style.top=my+'px';
+});
+(function anim(){
+  rx+=(mx-rx)*.11;ry+=(my-ry)*.11;
+  cr.style.left=rx+'px';cr.style.top=ry+'px';
+  requestAnimationFrame(anim);
+})();
+document.querySelectorAll('a,button,.skc,.svr,.ei,.tp').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
+});
+
+// NAV SCROLL
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',scrollY>60));
+
+// REVEAL
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('vis'),i*70);
+      obs.unobserve(e.target);
+    }
+  });
+},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
